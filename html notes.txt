@@ -1,0 +1,89 @@
+<> - opening tag  </> - closing tag
+
+Elements that dont require a closing tag are called void elements.
+
+<p> - paragraph, paragraphs by default come with margins at the top and the bottom.
+
+<button> - button
+
+<a> - hyperlinks , using attribute href="" for the link and target="_blank" to open the link in new tab
+
+According to the syntax extra spaces are ignored in the editor, even extra new lines are ignored.
+
+To type out special characters use html entity terminated by semi colon. If there is a greater than or less than symbol it is better practice to create it using an entity as the browser could confuse it with a tag.
+
+HTML STRUCTURE:
+<!DOCTPYE html>  tells browser to use modern version of html.
+<body> contains all things visible on the page.
+<head> contains all elements not visible on the page. example: <title> , which changes webpage name.
+Every time we change the code we have to refresh the browser page to see the effects. To avoid this we download an extension called live server. This only works if we have proper html structure in our code.
+
+<style> doesn't create anything on the page but can be used to change other elements thus it becomes a part of the head.
+
+To better organize our code we can separate the CSS code to a new css file. To link the 2 files we use a <link> element (doesn't have closing tag).
+Link element takes 2 attributes: 1)rel which stands for relation and specifies what type of thing we are linking in  2)href which tells what file we are linking(path if not in same folder).
+
+We can also get new fonts by copying embedded codes into the head section of our html.
+
+To add images use the <img> element, it is a void element. It has one attribute 'src'. Then you can style he image element in the head section. All the CSS properties we learnt can be applied for the image but all dont make sense.
+When we change the width of the image the height also changes so image has same shape. If we set the height as well the image loses its shape(becomes stretched). To prevent this use the object-fit method.
+
+To create a textbox use <input>, which has attribute type. To make something visible before typing use the placeholder attribute.
+
+HTML has 3 types of elements:
+1)Block element - takes up entire line in their container eg; paragraph
+2)Inline-block element - takes as much space as needed eg; image,input
+3)Inline element - appear within line of text eg; strong 
+We can use the display feature to change between block and in-line block for an element.
+
+<div> stands for division. It is just a box and is by default a block element but this can be changed. The key feature is that it can contain other elements in it.
+eg; you can put any images, paragraphs or other div inside it.
+
+Nested Layouts Technique
+Two types of layouts; 1)Vertical 2)Horizontal
+We have layouts inside layouts. We use vertical and horizontal layouts to break a design down.
+To create a vertical layout we use one div after another as divs are block elements.
+To create a horizontal layout make the consecutive divs inline block elements.
+
+CSS Grid:
+A grid is a layout that has rows and columns. Grid is created using inline styles in outer div. Grid removes the default display features and all extra spaces between divs.
+If we add more text to a div column the other div column automatically vertically aligns.
+
+'fr' is a special unit for grids that stands for free space. The number before fr tells us how much amount of remaining space it gets, it works like a ratio.
+
+To create space between grdi boxes, use CSS property column-gap and row-gap.
+
+To make sure images fit in their grid container set image width to 100%.
+
+Flexbox is similar to grid but more flexible.
+Flex-direction:row aligns the divs horizontally.
+Inside the flexbox the divs behave as inline block and take up only as much space as needed. It maintains vertical alignment.
+"flex: " in flexbox is the equivalent of "fr" in grid.
+Unlike grid, in flexbox if we change the order of the elements the layout changes too accordingly. 
+Flex property "justify-content" is used to change horizontal alignment, setting it as space between puts equal space between all the elements.
+To adjust vertical alignment use the align-items property.
+
+To restrain a width when resizing the window use property max width for 'fr' or 'flex' elements.
+
+Negative margin spacing removes space and pulls the element.
+
+To prevent the flexbox items form shrinking when resizing a window use "flex-shrink: 0;"
+To remove the default width set width to zero to shrink all the way.
+
+CSS position:
+position property 'static' is like not having a position property mentioned.
+Position property 'fixed' makes the element fixed to that position no matter where we scroll.
+If we set both left and right/ top and bottom , the element will stretch to accommodate.
+To prevent the position elements form resizing with the page use the width property.
+
+For position fixed the elements are placed in the browser window, while for position absolute they are placed on the page. Generally, position absolute is used inside a position fixed element and everything happens inside the fixed element.
+
+If an element is written below a header then it appears on top of it (this doesn't apply to position static , it always appears at the back), to override this we use z-index property. It determines which elements appear in front and which behind. By default it is zero. An element with higher z-index appears in front of element with lower z-index.
+
+Position relative displays the element as normal, except if we put position absolute inside it will position it relative to the position relative element and not the page.
+
+If we want to position an element beyond the edges , use negative numbers for that direction.
+
+We usually target classes using the '.' dot selector. Another type of selector is targeting a class within a class, which is written as .mainClass targetClass {}
+
+Usually centering something vertically is challenging in CSS, it can be done easily using a flexbox.('justify-content:center' for horizontal centering and 'align-items:center' for vertical centering). Note: these properties work in this way when flex direction is row (default) , but when flex direction is set to column these properties switch roles.

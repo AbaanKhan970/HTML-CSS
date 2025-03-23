@@ -1,0 +1,27 @@
+<> - opening tag  </> - closing tag
+
+Elements that dont require a closing tag are called void elements.
+
+<p> - paragraph, paragraphs by default come with margins at the top and the bottom.
+
+<button> - button
+
+<a> - hyperlinks , using attribute href="" for the link and target="_blank" to open the link in new tab
+
+According to the syntax extra spaces are ignored in the editor, even extra new lines are ignored.
+
+To type out special characters use html entity terminated by semi colon. If there is a greater than or less than symbol it is better practice to create it using an entity as the browser could confuse it with a tag.
+
+HTML STRUCTURE:
+<!DOCTPYE html>  tells browser to use modern version of html.
+<body> contains all things visible on the page.
+<head> contains all elements not visible on the page. example: <title> , which changes webpage name.
+Every time we change the code we have to refresh the browser page to see the effects. To avoid this we download an extension called live server. This only works if we have proper html structure in our code.
+
+<style> doesn't create anything on the page but can be used to change other elements thus it becomes a part of the head.
+
+To better organize our code we can separate the CSS code to a new css file. To link the 2 files we use a <link> element (doesn't have closing tag).
+Link element takes 2 attributes: 1)rel which stands for relation and specifies what type of thing we are linking in  2)href which tells what file we are linking(path if not in same folder).
+
+We can also get new fonts by copying embedded codes into the head section of our html.
+

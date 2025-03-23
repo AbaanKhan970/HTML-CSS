@@ -1,0 +1,32 @@
+CSS is used to change the appearance of HTML elements.
+
+<style> used to change html elements.
+
+To target specific element use the 'class=""' attribute. You can label using class attribute. In style use a dot(.) to target a class.
+
+To get rounded borders for a button set the border radius to half the height or width (whichever is lower).
+
+Pseudoclasses:
+Hover
+Active - when button clicked
+
+Opacity takes a value between 0 and 1. 1 is the normal and as we decrease it fades more.
+
+Transition property should always be in the base css style and not in a psuedoclass.
+
+Shadow is a CSS property. (box-shadow 0 0 0 color), the first value determines horizontal position of shadow, the second value is vertical position of the shadow, the third value is the blur. All are in pixels and last value is color.
+
+Adding space inside the button is called padding. While using height and width, if u change the text it flows out of the button. However if you use padding the button adjusts according to amount of text in it. This is called Box Model.
+
+To align everything  use vertical align.
+
+To force text onto a second line use "width". Then to adjust the spacing between the lines use "line-height".
+
+An element can be targeted by 2 styles using a class name or a tag name.
+If we have multiple lines setting the same property , there is a certain priority the browser follows. This is called CSS specificity.
+for example, when we target a paragraph using selectors 'p {} and .class-name {}' , a class name selector is more specific as it targets a specific class however p targets all paragraphs, thus the class name selector has priority in this case. 
+
+
+For a property to affect only a certain part of the text of a paragraph we use text element. example: strong, u ,span . Span text element has no styles but it is useful as we can give it a class and style it ourselves. We can add class attributes to other text elements too but they have a default style already.
+
+To overcome html ignoring multiple spaces, we can use the span text element and set a margin left to add spaces.
